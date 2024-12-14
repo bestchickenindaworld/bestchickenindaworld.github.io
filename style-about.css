@@ -1,0 +1,289 @@
+/* Chèn font bên ngoài */
+@font-face {
+    font-family: ganh;
+    src: url(font/Ganh/Ganh\ Type\ -\ Regular.otf);
+    font-style: normal;
+    src: url(font/Ganh/Ganh\ Type\ -\ RegularItalic.otf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: ganh-thin;
+    src: url(font/Ganh/Ganh\ Type\ -\ Thin.otf);
+    font-style: normal;
+    src: url(font/Ganh/Ganh\ Type\ -\ ThinItalic.otf);
+    font-style: italic;
+}
+
+/* Khi nhấn vào icon sẽ cuộn lên đầu trang 1 cách mượt mà */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Định dạng nền, font chữ mặc định*/
+body {
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    font-family: ganh;
+}
+
+/* Định dạng thanh cuộn bên phải trang */
+body::-webkit-scrollbar{
+    width: 2px;
+}
+
+/* Định dạng thanh điều hướng*/
+.nav-bar {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 10%;
+    top:20px;
+    z-index: 999; /* Thêm dòng này để thanh điều hướng luôn nằm trên nội dung*/
+    transition: 0.5s;
+}
+.nav-bar nav{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(0px);
+    height: 100%;
+    transition: 0.5s;
+}
+.nav-bar img {
+    height: 70%;
+    opacity: 80%;
+    border-radius: 25%;
+}
+.nav-bar ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-bar li {
+    padding-left: 5%;
+}
+.nav-bar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25vw;
+    display: inline-block;
+    position: relative;
+    text-shadow: 2px 2px 5px black;
+    transition: 0.25s ease-in-out;
+}
+
+/* Thêm Underline dưới các liên kết trên thanh điều hướng + hiệu ứng khi di chuột */
+.nav-bar li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: transform 0.25s ease-out;
+
+}
+.nav-bar li a:hover {
+    transform: translateY(-3px);
+}
+.nav-bar li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Định dạng khối chứa nội dung chính */
+.content {
+    margin: 6% 8% 0 8%;
+    background-color: #000612;
+    height: auto;
+    offset-position: normal;
+    padding: 125px 10% 125px 10%;
+    border-radius: 15px;
+    z-index: -2;
+}
+
+/* Định dạng tiêu đề nội dung chính */
+.content h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.25vw;
+}
+
+/* Định dạng văn bản nội dung chính */
+.content p, li {
+    color: white;
+    font-size: 1.5vw;
+}
+
+/* display flex giúp các khối nội dung nằm ngang hàng nhau */
+.content-block {
+    display: flex;
+}
+
+/* Định dạng văn bản giới thiệu */
+.introduction p {
+    width: 50%;
+}
+
+/* Định dạng các khối nội dung trái và phải */
+.content-block-left {
+    margin: 0;
+    width: 60%;
+}
+.content-block-left p {
+    width:85%
+}
+.content-block-right {
+    margin: 0;
+    width: 40%;
+}
+
+.content-block-right p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+.content-block-right li a {
+    text-decoration: none;
+}
+
+.content-block-right li a i {
+    width: 3vw;
+    height: 3vw;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: 0.75s ease-out;
+    z-index: 2;
+}
+
+.content-block-right li a i::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 15px;
+    background: var(--clr);
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.75s ease-out;
+}
+
+.content-block-right li a i:hover {
+    color: var(--textclr);
+    transition: 0.75s ease-out;
+    border: 2px solid var(--clr);
+}
+
+.content-block-right li a i:hover::after {
+    clip-path: circle(100% at 50% 50%);
+    transition: 0.75s ease-out;
+}
+
+#text-utv {
+    width: 48%;
+}
+
+/* Định dạng ảnh */
+.content-block-right img {
+    width: 70%;
+    border-radius: 50%;
+    border: white 5px solid;
+    transform: translateX(20%);
+}
+
+/* Thụt lề trên */
+.main-content {
+    margin-top: 125px;
+}
+
+/* Định dạng tên kênh + tên người dùng Discord */
+.discord-format {
+    background-color: rgba(65,70,118,.8);
+    color: rgb(201,205,251);
+}
+
+/* Định dạng chân trang */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 4vw;
+    margin-top: 2vw;
+
+}
+
+.footer p {
+    margin-left: 2vw;
+    font-size: 1vw;
+    color: white;
+    height: 100%;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer i {
+    height: 3vw;
+    width: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    color: white;
+    font-size: x-large;
+    border: white 2px solid;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer i::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.footer i:hover::after {
+    clip-path: circle(100% at 50% 50%);
+    transition: 0.5s ease-in-out;
+}
+
+.footer i:hover {
+    color: #000612;
+    transition: 0.5s ease-in-out;
+}

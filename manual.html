@@ -1,0 +1,134 @@
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-manual.css">
+     <!-- Link bootstrap icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>TestSurServer</title>
+</head>
+<body>
+    <!-- Tạo mốc để tính năng quay lại đầu trang hoạt động -->
+    <hr style="border-color: transparent;" id="heading">
+
+    <!-- Thanh điều hướng trên đầu trang -->
+    <div class="nav-bar" id="nav-bar">
+        <nav id="navigation">
+            <!-- Khi nhấn vào icon sẽ quay trở lại đầu trang -->
+            <a href="index.html"> 
+                <img src="img/icon.jpg">
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html"><b>Trang chủ</b></a>
+                </li>
+                <li>
+                    <a href="manual.html"><b>Hướng dẫn</b></a>
+                </li>
+                <li>
+                    <a href="about.html"><b>Giới thiệu</b></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+
+    <!-- Nội dung chính của trang -->
+    <div class="content">
+        <h1 style="font-size: 3vw; text-align: center;">Hướng dẫn cài đặt trước khi vào máy chủ</h1><br><br>
+        <div class="introduction">
+            <h1>Cài đặt ZeroTier</h1>
+            <div class="content-block">
+                <div class="content-block-left">
+                    <p>
+                        ZeroTier là phần mềm <b>bắt buộc</b> phải có để có thể kết nối tới máy chủ.<br>
+                    </p>
+                    <p><a href="https://www.zerotier.com/download/" target="_blank">Nhấp vào đây</a> để đến trang tải xuống ZeroTier và làm theo hướng dẫn trong video để được cấp quyền vào máy chủ nhé.</p>
+                </div>
+                <div class="content-block-right">
+                    <!-- Thêm thuộc tính controls để có thể điều khiển video -->
+                    <video src="vid/ZeroTier.mp4" id="vid-zrt" controls>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 style="text-align: right;">Cài đặt gói tài nguyên</h1><br>
+            <div class="content-block">
+                <div class="content-block-left">
+                    <video src="vid/ResourcePack.mp4" id="vid-rsp" controls>
+                </div>
+                <div class="content-block-right">
+                    <p>
+                    Gói tài nguyên - Resource Pack, cũng là thứ rất quan trọng để có trải nghiệm tốt nhất trong máy chủ, bởi lẽ, nếu không có gói tài nguyên, giao diện hệ thống có thể không hiển thị đầy đủ (tiêu biểu là thanh nước).
+                    </p>
+                    <p><a href="https://czteam-my.sharepoint.com/:u:/g/personal/lightgems_czteam_onmicrosoft_com/EU4H48iINiZPv1VCHhJ0GHwBYK4p79GWdn3ao6TYXnKxCA?e=5poOnp" target="_blank">Nhấp vào đây</a> để tải gói tài nguyên và làm theo hướng dẫn để cái đặt.</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Cuối cùng là kết nối với máy chủ thôi!</h1><br><br>
+            <div class="content-block">
+                <div class="content-block-left">
+                    <p>
+                        Sau khi đã làm đầy đủ 2 bước kể trên, đã đến lúc tham gia máy chủ!
+                    </p>
+                    <ul>
+                        <li>B1: Mở Minecraft đúng phiên bản</li>
+                        <li>B2: Chọn <b>Multiplayer</b> hoặc <b>Chơi mạng</b></li>
+                        <li>B3: Chọn <b>Add Server</b> hoặc <b>Thêm máy chủ</b></li>
+                        <li>B4: Nhập IP máy chủ vào <b>Server Address</b> hoặc <b>Địa chỉ máy chủ</b></li>
+                        <li>B5: Click đúp vào máy chủ vừa thêm</li>
+                    </ul>
+                    <p>Voilà! Chào mừng bạn đã đến với TestSurServer!</p>
+                </div>
+                <div class="content-block-right">
+                    <video src="vid/Server.mp4" id="vid-srv" controls>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 style="text-align: center;">Bạn cần hỗ trợ ư?</h1><br><br>
+            <div class="content-block">
+                <p class="content-block-left" id="text-utv">
+                    <a href="https://www.ultraviewer.net/vi/download.html" target="_blank">Nhấp vào đây</a> để đến trang tải xuống UltraViewer, cài đặt theo hướng dẫn và nhắn tin riêng cho mình qua Discord <span class="discord-format"> @chickenizdabest </span> để mình có thể hỗ trợ bạn nhé!
+                </p>
+                <div class="content-block-right">
+                    <video src="vid/UltraViewer.mp4" id="vid-utv" controls>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="main-content">
+            <h1 style="text-align: center;">Thông tin máy chủ</h1><br><br>
+            <p>IP máy chủ: 192.168.196.7:25565</p>
+            <p>Phiên bản Minecraft: 1.20.4</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 ‧ TestSurServer. All rights reserved.</p>
+        <a href="#heading"><i class="bi bi-arrow-bar-up"></i></a>
+    </div>
+</body>
+
+
+<script>
+    // Định dạng hàm với if-else để khi cuộn trang, thanh điều hướng sẽ thu lại, chuyển nền trắng và làm mờ ở nền
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // Keyframe khi cuộn trang xuống
+            document.getElementById("nav-bar").style.margin = "0 5% 0 5%";
+            document.getElementById("nav-bar").style.width = "90%";
+            document.getElementById("navigation").style.backgroundColor = "rgba(255,255,255,.05)";
+            document.getElementById("navigation").style.backdropFilter = "blur(5px)";
+        } else {
+            // Keyframe khi cuộn trang lên
+            document.getElementById("nav-bar").style.margin = "0";
+            document.getElementById("navigation").style.backgroundColor = "transparent";
+            document.getElementById("nav-bar").style.width = "100%";
+            document.getElementById("navigation").style.backdropFilter = "blur(0px)";
+        }
+    };
+    // Script kích hoạt hàm vừa định nghĩa mỗi khi cuộn trang
+    window.onscroll = function() {scrollFunction()};
+</script>
+</html>

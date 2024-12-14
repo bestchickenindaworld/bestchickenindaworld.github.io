@@ -1,0 +1,96 @@
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-about.css">
+     <!-- Link bootstrap icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>TestSurServer</title>
+</head>
+<body>
+    <!-- Tạo mốc để tính năng quay lại đầu trang hoạt động -->
+    <hr style="border-color: transparent;" id="heading">
+
+    <!-- Thanh điều hướng trên đầu trang -->
+    <div class="nav-bar" id="nav-bar">
+        <nav id="navigation">
+            <!-- Khi nhấn vào icon sẽ quay trở lại đầu trang -->
+            <a href="index.html"> 
+                <img src="img/icon.jpg">
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html"><b>Trang chủ</b></a>
+                </li>
+                <li>
+                    <a href="manual.html"><b>Hướng dẫn</b></a>
+                </li>
+                <li>
+                    <a href="about.html"><b>Giới thiệu</b></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+
+    <!-- Nội dung chính của trang -->
+    <div class="content">
+        <h1 style="font-size: 3.5vw; text-align: left;">Giới thiệu</h1><br><br>
+        <div class="introduction">
+            <h1>Xin chào!</h1>
+            <div class="content-block">
+                <div class="content-block-left">
+                    <p>
+                        Mình là <b>Lê Ngọc Minh</b> - hay còn được biết đến với biệt danh <b>chickenizdabest</b>.<br>
+                    </p>
+                    <p>
+                        Mình hiện đang làm <b>Dịch giả</b> cho dự án <b>Stellarity</b>, đồng thời cũng là <b>Admin</b> của <b>Server Discord Test</b> và <b>Server Minecraft TestSurServer</b>.
+                    </p>
+                    <p>
+                        Mình tạo ra Server này trong lúc rảnh rỗi với mục đích tạo ra một nơi mà mọi người có thể vui vẻ trò chuyện, phiêu lưu và giải toả sau những giờ học và làm việc căng thẳng trên trường.
+                    </p>
+                    <p>
+                        Chúc các bạn tận hưởng những phút giây giải trí vui vẻ tại TestSurServer!
+                    </p>
+                </div>
+                <div class="content-block-right">
+                    <img src="img/avatar.png" alt=""><br>
+                    <p>Kết nối với mình</p><br>
+                    <ul>
+                        <li><a href="https://www.facebook.com/lightgems/" target="_blank"><i class="bi bi-facebook" style="--clr: #1877F2; --textclr: #FFFFFF"></i></a></li>
+                        <li><a href="https://x.com/lg_minh07" target="_blank"><i class="bi bi-twitter-x" style="--clr: #FFFFFF; --textclr: #000000"></i></a></li>
+                        <li><a href="https://t.me/chickenizdabest" target="_blank"><i class="bi bi-telegram" style="--clr: #24A1DE; --textclr: #FFFFFF"></i></a></li>
+                        <li><a href="https://discord.gg/fqznUKD6" target="_blank"><i class="bi bi-discord" style="--clr: #5865F2; --textclr: #FFFFFF"></i></a></li>
+                        <li><a href="https://github.com/chickenizdabest" target="_blank"><i class="bi bi-github" style="--clr: #FFFFFF; --textclr: #000000"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 ‧ TestSurServer. All rights reserved.</p>
+        <a href="#heading"><i class="bi bi-arrow-bar-up"></i></a>
+    </div>
+</body>
+
+
+<script>
+    // Định dạng hàm với if-else để khi cuộn trang, thanh điều hướng sẽ thu lại, chuyển nền trắng và làm mờ ở nền
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // Keyframe khi cuộn trang xuống
+            document.getElementById("nav-bar").style.margin = "0 5% 0 5%";
+            document.getElementById("nav-bar").style.width = "90%";
+            document.getElementById("navigation").style.backgroundColor = "rgba(255,255,255,.05)";
+            document.getElementById("navigation").style.backdropFilter = "blur(5px)";
+        } else {
+            // Keyframe khi cuộn trang lên
+            document.getElementById("nav-bar").style.margin = "0";
+            document.getElementById("navigation").style.backgroundColor = "transparent";
+            document.getElementById("nav-bar").style.width = "100%";
+            document.getElementById("navigation").style.backdropFilter = "blur(0px)";
+        }
+    };
+    // Script kích hoạt hàm vừa định nghĩa mỗi khi cuộn trang
+    window.onscroll = function() {scrollFunction()};
+</script>
+</html>
