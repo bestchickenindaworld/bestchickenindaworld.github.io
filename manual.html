@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style-manual.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Link bootstrap icon -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>TestSurServer</title>
@@ -130,7 +131,7 @@
 <script>
     // Định dạng hàm với if-else để khi cuộn trang, thanh điều hướng sẽ thu lại, chuyển nền trắng và làm mờ ở nền
     function scrollFunction() {
-        if ($(window).width() > 800) {
+        if ($(window).width() > 480) {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 // Keyframe khi cuộn trang xuống
                 document.getElementById("nav-bar").style.margin = "0 5% 0 5%";

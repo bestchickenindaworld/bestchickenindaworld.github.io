@@ -24,7 +24,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 /* Định dạng nền, font chữ mặc định*/
 body {
     background-image: url(img/bg.jpg);
@@ -299,7 +298,7 @@ body::-webkit-scrollbar{
     transition: 0.5s ease-in-out;
 }
 
-@media only screen and (max-width: 800px){
+@media screen and (max-width: 480px){
     body {
         margin: 0;
     }
