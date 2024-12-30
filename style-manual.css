@@ -40,7 +40,7 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     position: fixed;
-    height: 10%;
+    height: 5vw;
     top:20px;
     z-index: 999; /* Thêm dòng này để thanh điều hướng luôn nằm trên nội dung*/
     transition: 0.5s;
@@ -58,32 +58,62 @@ body::-webkit-scrollbar{
     height: 100%;
     transition: 0.5s;
 }
+
+.nav-button {
+    display: none;
+}
+
 .nav-bar img {
     height: 70%;
     opacity: 80%;
     border-radius: 25%;
+    transition: 0.15s ease-out;
 }
 .nav-bar ul {
-    width: 30%;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0;
     list-style-type: none;
 }
 .nav-bar li {
-    padding-left: 5%;
+    align-items: center;
 }
 .nav-bar li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
     text-decoration: none;
     font-size: 1.25vw;
-    display: inline-block;
     position: relative;
     text-shadow: 2px 2px 5px black;
     transition: 0.25s ease-in-out;
 }
 
+.logo a {
+    height: 100%;
+}
+
+.link-group {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.link {
+    display: flex;
+    height: 100%;
+}
+
+.link a {
+    height: 50%;
+}
+
 /* Thêm Underline dưới các liên kết trên thanh điều hướng + hiệu ứng khi di chuột */
-.nav-bar li a::after {
+.link a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -93,13 +123,16 @@ body::-webkit-scrollbar{
     left: 0;
     background-color: white;
     transition: transform 0.25s ease-out;
-
 }
-.nav-bar li a:hover {
+.link a:hover {
     transform: translateY(-3px);
 }
-.nav-bar li a:hover::after {
+.link a:hover::after {
     transform: scaleX(1);
+}
+.logo img:hover {
+    height: 65%;
+    transition: 0.15s ease-out;
 }
 
 
@@ -250,4 +283,160 @@ body::-webkit-scrollbar{
 .footer i:hover {
     color: #000612;
     transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 500px){
+    body {
+        margin: 0;
+    }
+
+    .poster {
+        margin-top: 10vh;
+    }
+
+    .nav-bar{
+        width: 90%;
+        margin: 0 5% 0 5%;
+        height: 10%;
+        justify-content: flex-start
+        
+    }
+
+    #navigation {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255,255,255,.05);
+        backdrop-filter: blur(5px);
+    }
+    .nav-bar nav ul{
+        position: relative;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .link-group {
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        flex-direction: column;
+        display: flex;
+        height: 100vh;
+        width: 25vw;
+        transition: 0.5s ease-in-out;
+        justify-content: flex-start;
+        background-color: rgba(0,6,18,.8);
+        padding-top: 7vh;
+    }
+
+    .link {
+        height: 8%;
+        position: relative;
+    }
+
+    .link-group a {
+        position: absolute;
+        right: -20%;
+        text-align: right;
+    }
+
+    .nav-button {
+        display: contents;
+        transition: 0.5s ease-in-out;
+        
+    }
+    
+    .nav-button button, i{
+        background: transparent;
+        border-color: transparent;
+        color: white;
+        font-size: 3vh;
+        display: flex;
+        align-items: center;
+        transition: 0.25s ease-in-out;
+    }
+
+    #nav-button-hide {
+        align-self: flex-start;
+    }
+    
+    #nav-button-hide button {
+        margin-bottom: 2vh;
+        margin-left: 1vh;
+    }
+
+
+
+    .nav-bar nav ul li a {
+        font-size: 3vw;
+    }
+    #navigation{
+        /* flex-direction: column; */
+        justify-content: space-between;
+    }
+    #logo {
+        width: 8vw;
+        height: auto;
+    }
+    .content {
+        transform: translateY(0);
+        padding-top: 10%;
+        padding-bottom: 2vh;
+    }
+    .introduction p {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+    .content h1 {
+        font-size: 4.5vw;
+    }
+    .content p {
+        font-size: 3vw;
+        margin-bottom: 3vh;
+    }
+
+    .content-block {
+        flex-direction: column;
+    }
+    .content-block-left, .content-block-right{
+        width: 100%;
+        font-size: 10vw;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vh;
+    }
+    .content ul,li {
+        font-size: 2vh;
+    }
+    .content img {
+        width: 100%;
+    }
+    .main-content{
+        margin-top: 5vh;
+    }
+    #text-utv {
+        width: 100%;
+    }
+    #vid-srv {
+        transform: translateY(0%);
+    }
+    #vid-zrt {
+        transform: translateY(0%);
+    }
+    iframe {
+        width: 100% !important;
+    }
+    .footer {
+        height: 10vh;
+        margin-top: 3vh;
+    }
+    .footer p {
+        margin-left: 3vw;
+        font-size: 2vh;
+    }
+    .footer i {
+        height: 5vh;
+        width: 5vh;
+    }    
 }
