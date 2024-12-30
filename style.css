@@ -430,7 +430,7 @@ body::-webkit-scrollbar{
     }
     .footer p {
         margin-left: 3vw;
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     .footer i {
         height: 5vh;
